@@ -21,7 +21,6 @@ public class removeElement {
         ListNode last=null;
         ListNode cur=head;
         while(cur!=null){
-            //
             ListNode next=cur.next;
             if(cur.val!=val){
                 cur.next=null;
@@ -37,7 +36,7 @@ public class removeElement {
         }
         return result;
     }
-    public ListNode removeElements2(ListNode head, int val) {
+   private  ListNode removeElements2(ListNode head, int val) {
         if(head==null){
             return null;
         }
@@ -73,8 +72,7 @@ public class removeElement {
         n5.next=n6;
         n6.next=n7;
         removeElement element=new removeElement();
-        ListNode result=element.removeElements2(n1,6);
-        ListNode cur=result;
+        ListNode cur=element.removeElements2(n1,6);
         while (cur!=null){
             System.out.format("%d --->",cur.val);
             cur=cur.next;

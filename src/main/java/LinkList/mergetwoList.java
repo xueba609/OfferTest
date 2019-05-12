@@ -5,8 +5,9 @@ package LinkList;
 输入：1->2->4, 1->3->4
 输出：1->1->2->3->4->4
  */
+
 public class mergetwoList {
-    public ListNode mergeTwoLists1(ListNode l1, ListNode l2) {
+    private ListNode mergeTwoLists1(ListNode l1, ListNode l2) {
         if(l1==null){
             return l2;
         }
@@ -43,6 +44,7 @@ public class mergetwoList {
                 cur2=next;
             }
         }
+        //上面走完之后，会有其中一个为空
         if(cur1!=null){
             last.next=cur1;
         }
