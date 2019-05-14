@@ -28,7 +28,7 @@ public class mergetwoList {
                 }else {
                     last.next=cur1;
                 }
-                //更新最后的坐标
+                //更新最后的坐标，
                 last=cur1;
                 cur1=next;
             }else {
@@ -53,6 +53,7 @@ public class mergetwoList {
         }
     return result;
     }
+
     public static void main(String[] args) {
         ListNode n1=new ListNode(1);
         ListNode n2=new ListNode(2);
