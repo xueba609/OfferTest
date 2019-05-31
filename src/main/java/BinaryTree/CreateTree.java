@@ -42,17 +42,16 @@ public class CreateTree {
           int leftSize=find6(inorder,rootValue);
           //3.找到左子树的前序和和中序
 
-            int[] leftPreorder = Arrays.copyOfRange(preorder, 1, 1 + leftSize);
+            int[] leftPreorder = Arrays.copyOfRange(preorder, 1, 1+ leftSize);
             int[] leftInorder = Arrays.copyOfRange(inorder, 0, leftSize);
             root.left = buildTree(leftPreorder, leftInorder);
             //3.找到右子树的前序和和中序
-            int[] rightPreorder = Arrays.copyOfRange(preorder, 1 + leftSize, 1 + preorder.length);
+            int[] rightPreorder = Arrays.copyOfRange(preorder, 1 + leftSize, preorder.length);
             int[] rightInorder = Arrays.copyOfRange(inorder, leftSize + 1, preorder.length);
             root.right = buildTree(rightPreorder, rightInorder);
 
         return root;
     }
-
     public static void main(String[] args) {
         int [] a={3,9,20,15,7};
         int [] b={9,3,15,20,7};

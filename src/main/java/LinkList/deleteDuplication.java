@@ -18,7 +18,7 @@ public class deleteDuplication {
         ListNode p2=pHead.next;
         while(p2!=null){
             if(p1.val!=p2.val){
-                //p1hep2有序，所以p1和p2不等，所以p1和p2.next更不会想的呢个
+                //p1hep2有序，所以p1和p2不等，所以p1和p2.next更不会相等
                 pre=pre.next;
                 p1=p1.next;
                 p2=p2.next;
