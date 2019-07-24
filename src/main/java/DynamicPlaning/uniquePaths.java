@@ -8,7 +8,7 @@ public class uniquePaths {
             return 0;
         }
        int [][] array=new int[m][n];
-        // 初始化，第一行，第一列都为1
+        // 初始化，第一行，第一列的路径数为1
         for(int i=0;i<m;i++){
             array[i][0]=1;
         }
