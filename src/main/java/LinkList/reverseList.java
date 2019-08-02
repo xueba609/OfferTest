@@ -16,7 +16,7 @@ import java.util.List;
 class ListNode {
      int val;
      ListNode next;
-      ListNode(int x) { val = x; }
+     ListNode(int x) { this.val = x; }
   }
 public class reverseList {
     public ListNode reverseList1(ListNode head){
