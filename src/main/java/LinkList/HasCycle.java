@@ -11,31 +11,37 @@ package LinkList;
 *思路：快慢指针，快的走2步，慢的走一步。判断是否有环
 * 如果快的==null,没有环，如果快的等于==慢的则有环
 * 起始点到入口点的距离：L  圆的周长：R    环入口到相遇点：C
-* 满指针：L+C   快指针L+C+nR(n>1)     2(L+C)
+* 慢指针：L+C   快指针L+C+nR(n>1)     2(L+C)
 * 解方程：L=nR-C=(n-1)R+(R-C)
  */
 
-public class HasCycle {
+public class HasCycle{
+        private ListNode getIntersect(ListNode head) {
+            ListNode fast = head;
+            ListNode slow = head;
+            while (fast!= null && fast.next != null) {
+                slow = slow.next;
+                fast= fast.next.next;
+                if (slow == fast) {
+                    return slow;
+                }
+            }
+
+            return null;
+        }
     public ListNode detectCycle(ListNode head){
         if(head==null){
             return null;
         }
-        ListNode fast=head;
-        ListNode slow=head;
-        do{
-            fast=fast.next;
-            if(fast!=null){
-                fast=fast.next;
-                slow=slow.next;
-            }
-        }while (fast!=null&&slow!=null);//fast等于null,没有环，fast==slow有环
-        if(fast==null){
+
+      ListNode temp=getIntersect(head);
+        if(temp==null){
             return null;
         }
         //一个从起点出发
         ListNode p1=head;
         //一个从相遇点出发
-        ListNode p2=slow;
+        ListNode p2=temp;
         while(p1!=p2){
             p1=p1.next;
             p2=p2.next;
