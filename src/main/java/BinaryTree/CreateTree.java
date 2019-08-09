@@ -2,6 +2,7 @@ package BinaryTree;
 
 
 import java.util.Arrays;
+import java.util.Stack;
 
 /*
 根据一棵树的前序遍历与中序遍历构造二叉树。
@@ -14,6 +15,8 @@ import java.util.Arrays;
 前序遍历 preorder = [3,9,20,15,7]
 中序遍历 inorder = [9,3,15,20,7]
  */
+//思路：递归。根据前序确定根节点 ，找到中序的根节点，分为左右子树，并拿到左右子树的前中序
+//在左右子树继续找根节点和左右子树
 public class CreateTree {
     private static class Node{
       int   value;
@@ -58,5 +61,6 @@ public class CreateTree {
         CreateTree c=new CreateTree();
         Node d=c.buildTree(a,b);
         System.out.println(d);
+
     }
 }
