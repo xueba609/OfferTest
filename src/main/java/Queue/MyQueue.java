@@ -1,4 +1,8 @@
 package Queue;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class   MyQueue {
     private class Node{
         int value;
@@ -51,4 +55,8 @@ public class   MyQueue {
     public boolean isEmpty(){
         return this.head==null;
     }
+  void test(){
+        Queue<Integer> q=new LinkedList<>();
+
+  }
 }

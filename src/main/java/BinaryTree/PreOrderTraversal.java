@@ -1,4 +1,8 @@
 package BinaryTree;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /*
 *前序遍历
  */
@@ -18,6 +22,19 @@ public class PreOrderTraversal {
             preOrderTraversal(root.left);
             preOrderTraversal(root.right);
         }
+    }
+    private static List<Character> preOrderTraversa2(Node root){
+        if(root==null) {
+        return new ArrayList<>();
+        }
+        List<Character> list=new ArrayList<>();
+        list.add(root.value);
+        List<Character> left=preOrderTraversa2(root.left);
+        List<Character> right=preOrderTraversa2(root.right);
+        list.addAll(left);
+        list.addAll(right);
+        return list;
+
     }
       private static Node createTestTree(){
            Node a=new Node('A');

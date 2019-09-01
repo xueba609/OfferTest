@@ -13,7 +13,7 @@ package FaceAndFace.JianOffer;
         this.val = val;
     }
 }
-public class FindKthToTail {
+public class 输出倒数第k个节点 {
     public static void main(String[] args) {
         ListNode n1=new ListNode(1);
         ListNode n2=new ListNode(2);

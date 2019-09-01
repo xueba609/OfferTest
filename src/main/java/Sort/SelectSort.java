@@ -32,7 +32,7 @@ public class SelectSort {
             if(max==left){
               max=min;
             }
-            swap(a,right,min);
+            swap(a,right,max);
             left++;
             right--;
         }

@@ -8,7 +8,7 @@ import java.util.Scanner;
 /*
 *思路：通过Interger提供的二进制方法得到
  */
-public class NumberOf {
+public class 二进制1的个数 {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         int n=scanner.nextInt();

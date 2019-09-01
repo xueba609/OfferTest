@@ -9,7 +9,7 @@ package FaceAndFace.JianOffer;
 * 有可能交换后原来不成立的地方，现在成立了
 *
  */
-public class reOrderArray {
+public class 使奇数在偶数前面 {
     public static void main(String[] args) {
         int[] a = {1, 2, 4, 5, 6, 8, 9, 10};
         reOrderArray1(a);

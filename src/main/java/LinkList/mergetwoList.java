@@ -51,6 +51,7 @@ public class mergetwoList {
         if(cur2!=null){
             last.next=cur2;
         }
+
     return result;
     }
 

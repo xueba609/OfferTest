@@ -23,6 +23,7 @@ public class copyRandomList {
             //让cur走向下一节点
             cur=cur.next.next;
         }
+        
         //设置新的节点random
         cur=head;
         while(cur!=null){

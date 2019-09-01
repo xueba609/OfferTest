@@ -25,7 +25,7 @@ public class MostK {
     }
 
     public static void buildMinHeap(int[] K, int length) {
-        //以数组来模仿堆，父节点为i=(length-1)/2,左孩子为2i+1,右孩子为2i+2
+        //以数组来模仿堆，最后一个节点的父节点为i=(length-1)/2,左孩子为2i+1,右孩子为2i+2
         for(int i=length/2-1;i>=0;i--) {
             adjustHeap(K,i,length);
         }

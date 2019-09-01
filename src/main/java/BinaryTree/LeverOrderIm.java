@@ -2,6 +2,8 @@ package BinaryTree;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
+
 /*
 *给定一个二叉树，返回其按层次遍历的节点值。 （即逐层地，从左到右访问所有节点）。
 
@@ -48,6 +50,14 @@ public class LeverOrderIm {
             }
         }
          return list;
+    }
+
+    private static void levelOrder2(TreeNode node){
+        Queue<TreeNode> queue=new LinkedList<>();
+
+
+
+        //完全二叉树，也是利用层序遍历，当遇见#则判断后面的节点是否都是#
     }
 
     public static void main(String[] args) {

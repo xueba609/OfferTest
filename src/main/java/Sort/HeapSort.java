@@ -16,10 +16,12 @@ public class HeapSort {
     }
     private static void heapSort(int[] a) {
              //创建大堆
+    //如果建小堆，则堆顶会被破坏，要重新建堆，代价很大
              createHeap(a);
              for(int i=0;i<a.length;i++){
                  //堆顶元素和最后一个元素交换，堆元素-1；
                  swap(a,0,a.length-i-1);
+                 //重新调整的数组长度为a.length-i-1，在进行调整为大堆
                  adjustHeap1(a,a.length-i-1,0);
              }
     }

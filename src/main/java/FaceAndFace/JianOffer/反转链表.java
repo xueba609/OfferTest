@@ -5,7 +5,7 @@ package FaceAndFace.JianOffer;
 /*
 *思路：一次操作三个节点，当前节点的前一个节点，当前节点后一个节点
  */
-public class ReverseList {
+public class 反转链表 {
     public static void main(String[] args) {
         ListNode n1=new ListNode(1);
         ListNode n2=new ListNode(2);
